@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "lato";
+    src: url("fonts/lato-bold-webfont.woff2") format("woff2"),
+        url("fonts/lato-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +16,11 @@
     grid-template-columns: 1fr 4fr;
 }
 
+.container div {
+    padding: 10px;
+    font-family: "lato";
+    font-weight: bold;
+}
 .header {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -15,6 +28,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
+    gap: 4px;
 }
 
 .sidebar {
@@ -23,9 +37,35 @@
     grid-column: 1;
     grid-row: 1/3;
     display: grid;
+    grid-template-rows: 100px 200px 100px;
 }
+
+.logo {
+    font-size: x-large;
+    grid-row: 1;
+}
+
+.nav,
+.branding {
+    font-size: larger;
+}
+
+.nav {
+    grid-row: 2;
+}
+
+.branding {
+    grid-row: 3;
+}
+
 .main-content {
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(197, 197, 197);
     grid-column: 2;
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4px;
+}
+
+ul {
+    list-style: none;
 }

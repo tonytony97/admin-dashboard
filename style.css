@@ -14,7 +14,6 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 4px;
 }
 
 .container div {
@@ -28,34 +27,75 @@
     grid-column: 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 0.5fr 0.3fr;
+    align-content: center;
+    align-items: center;
 }
 
 .search {
     grid-row: 1;
     grid-column: 1;
+    margin-left: 20px;
+}
+
+.search input {
+    width: 600px;
+    height: 25px;
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+}
+
+.search .icon {
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 10px;
 }
 
 .notification {
     grid-row: 1;
     grid-column: 2;
+    margin-left: 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.8fr 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+}
+.notification .icon {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.notification .pfp {
+    background-color: rgb(248, 113, 113);
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
 }
 
 .user-info {
     grid-row: 2;
     grid-column: 1;
+    margin-left: 20px;
     display: grid;
-    grid-template-columns: 0.1fr 0.2fr;
+    grid-template-columns: 0.1fr 0.6fr;
+    align-items: center;
 }
-
-.user-info p {
-    grid-column: 2;
-}
-
-.user-info .icon {
+.user-info .pfp {
+    background-color: rgb(248, 113, 113);
+    grid-row: 1/2;
     grid-column: 1;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+}
+.user-info div {
+    grid-column: 2;
+    font-size: small;
+}
+
+.user-info .user-name {
+    font-size: x-large;
 }
 
 .share-buttons {
@@ -63,6 +103,15 @@
     grid-column: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.share-buttons li {
+    background-color: rgb(4, 120, 87);
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    width: 70px;
+    border-radius: 30px;
 }
 
 .sidebar {
@@ -74,6 +123,13 @@
     grid-template-rows: 0.3fr 0.9fr 1fr;
 }
 
+.sidebar .icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 24px;
+    filter: invert(100%);
+}
+
 .logo {
     font-size: xx-large;
 }
@@ -83,6 +139,7 @@
     max-height: 50px;
     filter: invert(100%);
 }
+
 .nav,
 .branding {
     font-size: x-large;
@@ -94,13 +151,6 @@
 
 .branding {
     grid-row: 3;
-}
-
-.sidebar .icon {
-    max-width: 30px;
-    max-height: 30px;
-    filter: invert(100%);
-    margin-right: 24px;
 }
 
 .main-content {

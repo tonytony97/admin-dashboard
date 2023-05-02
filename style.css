@@ -22,9 +22,10 @@
 }
 .header {
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 0.1em rgb(173, 206, 189);
+    margin-bottom: 4px;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    grid-column: 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 0.5fr 0.3fr;
